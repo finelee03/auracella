@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100vh;
+    gap: 2px;
+    padding: 2px;
+    background-color: #1a1a1a;
+}
+
+.panel {
+    background-color: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.panel:hover {
+    background-color: #111111;
+}
+
+.content {
+    text-align: center;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 200;
+    letter-spacing: 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    opacity: 0.7;
+}
+
+/* Panel specific styles */
+#render-full {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#render-detail {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#exploded-view {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#how-to-use {
+    grid-column: 2;
+    grid-row: 2;
+}
