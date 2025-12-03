@@ -59,12 +59,14 @@ html, body {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-weight: 300;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--wine);
+    display: flex;
+    align-items: center;
     text-decoration: none;
+}
+
+.logo img {
+    height: 32px;
+    width: auto;
 }
 
 .nav {
