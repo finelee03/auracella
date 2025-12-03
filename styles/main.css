@@ -4,81 +4,195 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Primary Colors */
+    --wine: #401312;
+    --wine-light: #5a1f1e;
+    --wine-dark: #2a0c0b;
+
+    /* Neutral - Cool Gray */
+    --gray: #b7b5b9;
+    --gray-light: #d4d2d6;
+    --gray-dark: #8a888c;
+
+    /* Whites */
+    --white: #ffffff;
+    --white-off: #f8f7f9;
+    --white-warm: #faf9f7;
+
+    /* Text */
+    --text-primary: #2c2c2c;
+    --text-secondary: #5a5a5a;
+    --text-muted: #8a8a8a;
+}
+
 html, body {
     height: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #0a0a0a;
-    color: #ffffff;
+    background-color: var(--white-off);
+    color: var(--text-primary);
 }
 
-.container {
+/* Header - hidden by default */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--wine);
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 40px;
+}
+
+.nav a {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: var(--wine);
+}
+
+.nav a.active {
+    color: var(--wine);
+}
+
+/* Header trigger area */
+.header-trigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    z-index: 999;
+}
+
+.header-trigger:hover + .header,
+.header-trigger:hover ~ .header,
+.header:hover {
+    transform: translateY(0);
+}
+
+/* JS-controlled visibility */
+.header.visible {
+    transform: translateY(0);
+}
+
+/* Main grid for render shots */
+.main-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     height: 100vh;
     gap: 2px;
-    padding: 2px;
-    background-color: #1a1a1a;
+    background-color: var(--gray-light);
 }
 
-.panel {
-    background-color: #0a0a0a;
+.render-section {
+    background-color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    transition: all 0.3s ease;
 }
 
-.panel:hover {
-    background-color: #111111;
+.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed var(--gray);
+    margin: 20px;
 }
 
-.content {
-    text-align: center;
-    z-index: 1;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 200;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-    font-weight: 300;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-}
-
-.tagline {
+.placeholder span {
     font-size: 0.875rem;
     font-weight: 300;
     letter-spacing: 0.2em;
-    opacity: 0.7;
+    text-transform: uppercase;
+    color: var(--gray-dark);
 }
 
-/* Panel specific styles */
-#render-full {
+/* Section positions */
+.section-hero {
     grid-column: 1;
     grid-row: 1;
 }
 
-#render-detail {
+.section-side {
     grid-column: 2;
     grid-row: 1;
 }
 
-#exploded-view {
+.section-top {
     grid-column: 1;
     grid-row: 2;
 }
 
-#how-to-use {
+.section-detail {
     grid-column: 2;
     grid-row: 2;
+}
+
+/* ===== Subpage styles ===== */
+.subpage {
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.subpage-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.subpage h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.subpage p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-secondary);
 }
