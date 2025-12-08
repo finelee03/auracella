@@ -157,6 +157,21 @@ html, body {
     height: 600px;
 }
 
+/* 1x2 flex - fills remaining space on left */
+.grid-item.x1x2-flex {
+    flex: 1;
+    min-width: 0;
+    height: 600px;
+}
+
+/* 1x2 - fixed width */
+.grid-item.x1x2 {
+    width: 300px;
+    min-width: 300px;
+    height: 600px;
+    background-color: var(--white);
+}
+
 
 /* ===== Subpage styles ===== */
 .subpage {
