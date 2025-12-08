@@ -122,54 +122,71 @@ html, body {
     display: block;
 }
 
-/* Grid section */
-.grid-section {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px;
-    gap: 0;
-    padding: 0;
-    background-color: var(--white-off);
+/* Grid row - flexbox layout */
+.grid-row {
+    display: flex;
+    width: 100%;
 }
 
 .grid-item {
     background-color: var(--gray-light);
-    border-radius: 0;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
-.grid-item.x3x4 {
-    grid-column: span 3;
-    grid-row: span 4;
+/* 2x3 - fixed width (2 units = 600px) */
+.grid-item.x2x3 {
+    width: 600px;
+    min-width: 600px;
+    height: 900px;
 }
 
+/* 1x3 flex - fills remaining space */
+.grid-item.x1x3-flex {
+    flex: 1;
+    min-width: 0;
+    height: 900px;
+}
+
+/* 2x2 - fixed width */
 .grid-item.x2x2 {
-    grid-column: span 2;
-    grid-row: span 2;
+    width: 600px;
+    min-width: 600px;
+    height: 600px;
 }
 
-.grid-item.large {
-    grid-column: span 2;
-    grid-row: span 2;
+/* Responsive: when window < 600px + some space, stack vertically */
+@media (max-width: 800px) {
+    .grid-row {
+        flex-direction: column;
+    }
+
+    .grid-item.x1x3-flex {
+        width: 100%;
+        height: 300px;
+    }
 }
 
-.grid-item.tall {
-    grid-row: span 2;
-}
+/* When window < 600px, shrink everything */
+@media (max-width: 600px) {
+    .grid-item.x2x3 {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        aspect-ratio: 2/3;
+    }
 
-.grid-item.wide {
-    grid-column: span 2;
-}
+    .grid-item.x2x2 {
+        width: 100%;
+        min-width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
 
-.grid-item.medium {
-    grid-column: span 1;
-    grid-row: span 1;
-}
-
-.grid-item.small {
-    grid-column: span 1;
-    grid-row: span 1;
+    .grid-item.x1x3-flex {
+        height: 200px;
+    }
 }
 
 /* ===== Subpage styles ===== */
