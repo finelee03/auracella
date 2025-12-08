@@ -254,7 +254,7 @@ html, body {
 }
 
 .step-title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 300;
     color: var(--text-primary);
     margin-bottom: 16px;
