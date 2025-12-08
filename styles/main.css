@@ -212,6 +212,11 @@ html, body {
     padding: 100px 60px 40px;
 }
 
+.how-to-use-page ~ .header,
+body:has(.how-to-use-page) .header {
+    background-color: var(--white-off);
+}
+
 .steps-container {
     display: flex;
     flex-direction: column;
