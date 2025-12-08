@@ -209,7 +209,7 @@ html, body {
 /* ===== How to Use - Steps ===== */
 .how-to-use-page {
     min-height: 100vh;
-    padding: 40px 60px;
+    padding: 100px 60px 40px;
 }
 
 .steps-container {
@@ -231,6 +231,7 @@ html, body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 12px;
 }
 
 .step-content {
@@ -240,7 +241,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--white);
+    background-color: transparent;
 }
 
 .step-number {
