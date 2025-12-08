@@ -139,8 +139,13 @@ html, body {
     background-position: center;
 }
 
-.grid-item.x3x2 {
+.grid-item.x3x4 {
     grid-column: span 3;
+    grid-row: span 4;
+}
+
+.grid-item.x2x2 {
+    grid-column: span 2;
     grid-row: span 2;
 }
 
