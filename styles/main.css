@@ -200,3 +200,68 @@ html, body {
     line-height: 1.8;
     color: var(--text-secondary);
 }
+
+/* ===== Detail page ===== */
+.detail-page {
+    width: 100%;
+}
+
+/* ===== How to Use - Steps ===== */
+.how-to-use-page {
+    min-height: 100vh;
+    padding: 40px 60px;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.step-row {
+    display: flex;
+    gap: 0;
+}
+
+.step-image {
+    width: 400px;
+    min-width: 400px;
+    height: 400px;
+    background-color: var(--gray-light);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.step-content {
+    flex: 1;
+    min-width: 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.step-number {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--wine);
+    margin-bottom: 16px;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.step-description {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}

@@ -4,18 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const isMainPage = header && header.classList.contains('visible');
 
     if (isMainPage) {
-        let hasScrolled = false;
-
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 50 && !hasScrolled) {
-                hasScrolled = true;
+            if (window.scrollY > 50) {
+                // 스크롤 내리면 호버 모드
+                header.classList.add('scroll-mode');
                 header.classList.remove('visible');
+            } else {
+                // 맨 위로 돌아오면 고정 모드
+                header.classList.remove('scroll-mode');
+                header.classList.add('visible');
             }
         });
 
         // Hover to show header after scrolling
         document.addEventListener('mousemove', (e) => {
-            if (hasScrolled) {
+            if (header.classList.contains('scroll-mode')) {
                 const isInTrigger = e.clientY <= 80;
                 const isInHeader = header.contains(e.target);
 
