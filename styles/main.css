@@ -213,8 +213,8 @@ html, body {
 }
 
 .parts-image {
-    width: 900px;
-    min-width: 900px;
+    width: 400px;
+    min-width: 400px;
     height: 900px;
     overflow: hidden;
     border-radius: 25px;
