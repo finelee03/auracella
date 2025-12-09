@@ -31,6 +31,7 @@ html, body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--white-off);
     color: var(--text-primary);
+    overflow-x: hidden;
 }
 
 /* Header - hidden by default */
@@ -116,7 +117,7 @@ html, body {
 }
 
 .full-width-img {
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: block;
 }
