@@ -206,6 +206,62 @@ html, body {
     width: 100%;
 }
 
+.parts-section {
+    display: flex;
+    padding: 60px;
+    background-color: var(--white-off);
+}
+
+.parts-image {
+    width: 600px;
+    min-width: 600px;
+    height: 600px;
+}
+
+.parts-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.parts-list {
+    flex: 1;
+    padding-left: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parts-list ol {
+    list-style: none;
+    counter-reset: parts-counter;
+}
+
+.parts-list li {
+    counter-increment: parts-counter;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.parts-list li::before {
+    content: counter(parts-counter) ".";
+    display: inline-block;
+    width: 28px;
+    color: var(--wine);
+    font-weight: 400;
+}
+
+.part-ko {
+    color: var(--text-primary);
+}
+
+.part-en {
+    color: var(--text-muted);
+    margin-left: 8px;
+}
+
 /* ===== How to Use - Steps ===== */
 .how-to-use-page {
     min-height: 100vh;
