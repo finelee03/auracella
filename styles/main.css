@@ -216,6 +216,8 @@ html, body {
     width: 600px;
     min-width: 600px;
     height: 600px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 
 .parts-image img {
