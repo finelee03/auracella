@@ -229,7 +229,7 @@ html, body {
 
 .parts-list {
     flex: 1;
-    padding-left: 60px;
+    padding-left: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,8 +242,8 @@ html, body {
 
 .parts-list li {
     counter-increment: parts-counter;
-    margin-bottom: 12px;
-    font-size: 1rem;
+    margin-bottom: 14px;
+    font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.6;
 }
