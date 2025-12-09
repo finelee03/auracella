@@ -213,9 +213,9 @@ html, body {
 }
 
 .parts-image {
-    width: 600px;
-    min-width: 600px;
-    height: 600px;
+    width: 900px;
+    min-width: 900px;
+    height: 900px;
     overflow: hidden;
     border-radius: 25px;
 }
