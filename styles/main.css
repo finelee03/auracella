@@ -208,7 +208,7 @@ html, body {
 
 .parts-section {
     display: flex;
-    padding: 60px;
+    padding: 60px 60px 60px 120px;
     background-color: var(--white-off);
 }
 
