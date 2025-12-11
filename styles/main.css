@@ -123,6 +123,13 @@ html, body {
     object-fit: contain;
 }
 
+.full-width-video {
+    width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
 /* Grid row - flexbox layout */
 .grid-row {
     display: flex;
