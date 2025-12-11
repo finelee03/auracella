@@ -331,3 +331,23 @@ body:has(.how-to-use-page) .header {
     line-height: 1.8;
     color: var(--text-secondary);
 }
+
+/* ===== Case Page ===== */
+.case-page {
+    min-height: 100vh;
+    padding: 120px 0 40px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-off);
+}
+
+body:has(.case-page) .header {
+    background-color: var(--white-off);
+}
+
+.case-main-img {
+    width: 75vw;
+    height: auto;
+    border-radius: 25px;
+    object-fit: contain;
+}
