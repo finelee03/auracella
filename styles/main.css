@@ -368,8 +368,8 @@ body:has(.case-page) .header {
 }
 
 .case-sub-img {
-    flex: 1;
+    width: calc((75vw - 20px) / 2);
     height: auto;
     border-radius: 25px;
-    object-fit: cover;
+    object-fit: contain;
 }
