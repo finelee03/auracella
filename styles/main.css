@@ -269,7 +269,7 @@ html, body {
 /* ===== How to Use - Steps ===== */
 .how-to-use-page {
     min-height: 100vh;
-    padding: 100px 180px 40px;
+    padding: 120px 180px 40px;
 }
 
 .how-to-use-page ~ .header,
